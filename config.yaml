@@ -1,0 +1,69 @@
+baseURL: https://www.berthatobias.com # todo: change site url.
+title: BERTHA TOBIAS # todo: change site name.
+defaultContentLanguage: 'en'
+theme: eternity
+googleAnalytics: '' # todo: set your analytics id.
+
+params:
+  image: /images/banner.png
+  subtitle: Youth leader & TV Talent. # todo: change default subtitle for your website.
+  copyright: All rights reserved. # todo: set your copyright type.
+  author: Bertha Tobias # todo: set your full name.
+  dontShowSource: false # please, do not do this :)
+  portfolio:
+    columns:
+      desktop:
+        nature: 4
+        archive: 6
+        people: 2
+        default: 3
+      mobile:
+        default: 2
+        archive: 3
+        people: 1
+  socials:
+    # todo: change these links.
+    - icon: 'far fa-envelope fa-lg'
+      url: 'mailto:hello@berthatobias.com'
+      landing: true
+    - icon: 'fab fa-instagram fa-lg'
+      url: 'http://instagram.com/bertha_tobias'
+    - icon: 'fab fa-twitter fa-lg'
+      url: 'https://twitter.com/BerthaJTobias'
+  homepage: "/leader" # homepage link, mostly same with menu.main[0]
+  specialPages:
+    - leader
+    - speaker
+  bypassWelcomePage: true # redirects "/" to "homepage" when it's true.
+  plausible: 'berthatobias.com' # todo: set your plausible id.
+  disableRadius: false
+
+markup:
+  defaultMarkdownHandler: goldmark
+  goldmark:
+    renderer:
+      unsafe: true
+
+taxonomies:
+  tag: tags
+
+permalinks:
+  work: ":filename/"
+
+menu:
+  main:
+    - name: Youth leader & TV Talent 
+      url: /leader/
+      weight: 1
+    - name: Media
+      url: /media/
+      weight: 2
+    - name: Public Leadership
+      url: /public/
+      weight: 3
+    - name: Notable Speaker Experience 
+      url: /speaker/
+      weight: 4
+    - name: Press & Publications
+      url: /press/
+      weight: 5
